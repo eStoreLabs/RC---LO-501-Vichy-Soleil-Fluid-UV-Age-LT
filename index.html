@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vichy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #es-vichy.es-vichy {
+        font-family: 'Spartan', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.2;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        color: #2b2a29;
+        background-color: #fff;
+      }
+
+      #es-vichy.es-vichy * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      #es-vichy.es-vichy h2,
+      #es-vichy.es-vichy h3,
+      #es-vichy.es-vichy h4,
+      #es-vichy.es-vichy h5 {
+        font-family: 'Spartan', sans-serif;
+        color: #111;
+      }
+
+      #es-vichy.es-vichy .es-kv {
+        background: #fff;
+      }
+
+      #es-vichy.es-vichy .es-kv__packshot {
+        position: relative;
+      }
+
+      #es-vichy.es-vichy .es-kv__animated-items {
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        opacity: 0;
+        -webkit-animation: slidedown 0.6s ease forwards;
+        animation: slidedown 0.6s ease forwards;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+
+      #es-vichy.es-vichy .es-kv__animated-item {
+        height: 300px;
+      }
+
+      #es-vichy.es-vichy .es-kv__disc {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 9px;
+        text-align: center;
+      }
+
+      #es-vichy.es-vichy .es-kv__photo {
+        position: relative;
+      }
+
+      #es-vichy.es-vichy .es-kv__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-kv__img--photo {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+
+      #es-vichy.es-vichy .es-kv__content {
+        background: url('assets/photo.jpg') center/cover no-repeat;
+        padding-top: 69px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 535px;
+      }
+
+      #es-vichy.es-vichy .es-kv__title {
+        margin: 0;
+        line-height: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        padding: 32px 24px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 26px;
+        text-align: right;
+        opacity: 0;
+        -webkit-animation: slideright 0.6s ease forwards;
+        animation: slideright 0.6s ease forwards;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+
+      #es-vichy.es-vichy .es-info {
+        padding: 32px 16px;
+        margin-bottom: 32px;
+        max-width: 812px;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-info__border {
+        padding: 24px 16px;
+        position: relative;
+        margin-bottom: 32px;
+      }
+
+      #es-vichy.es-vichy .es-info__border::before {
+        content: url('assets/border-1.png');
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #es-vichy.es-vichy .es-info__border::after {
+        content: url('assets/border-2.png');
+        position: absolute;
+        right: 0;
+      }
+
+      #es-vichy.es-vichy .es-info__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 32px;
+        text-transform: uppercase;
+      }
+
+      #es-vichy.es-vichy .es-info__title span {
+        font-weight: 700;
+        padding-top: 16px;
+        display: block;
+      }
+
+      #es-vichy.es-vichy .es-info__desc {
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.4;
+        max-width: 650px;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-info__desc strong {
+        text-transform: uppercase;
+      }
+
+      #es-vichy.es-vichy .es-info__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      #es-vichy.es-vichy .es-info__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-info__features {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 -8px;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      #es-vichy.es-vichy .es-info__single {
+        padding: 0 8px;
+        width: 200px;
+      }
+
+      #es-vichy.es-vichy .es-info__single:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      #es-vichy.es-vichy .es-info__icon {
+        margin-bottom: 16px;
+      }
+
+      #es-vichy.es-vichy .es-use {
+        background: url('assets/bg-1.jpg') no-repeat;
+        background-position: 8% bottom;
+        min-height: 880px;
+        padding: 0 16px;
+        margin-bottom: 32px;
+      }
+
+      #es-vichy.es-vichy .es-use__content {
+        max-width: 730px;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-use__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-size: 22px;
+        padding-bottom: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      #es-vichy.es-vichy .es-use__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      #es-vichy.es-vichy .es-use__item {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        margin-bottom: 16px;
+        padding-left: 24px;
+        position: relative;
+      }
+
+      #es-vichy.es-vichy .es-use__item::before {
+        content: '●';
+        position: absolute;
+        color: #e17836;
+        top: 0;
+        left: 0;
+      }
+
+      #es-vichy.es-vichy .es-banner {
+        margin-bottom: 64px;
+      }
+
+      #es-vichy.es-vichy .es-banner__border {
+        background: linear-gradient(45deg, #bb5329 0%, #e07736 100%);
+        padding: 32px 16px;
+        margin-bottom: 16px;
+      }
+
+      #es-vichy.es-vichy .es-banner__title {
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 24px;
+      }
+
+      #es-vichy.es-vichy .es-banner__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      #es-vichy.es-vichy .es-banner__single {
+        width: 150px;
+        padding: 0 16px;
+      }
+
+      #es-vichy.es-vichy .es-banner__single:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      #es-vichy.es-vichy .es-banner__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        font-family: inherit;
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+      }
+
+      #es-vichy.es-vichy .es-banner__text--number {
+        font-size: 50px;
+        line-height: 1;
+      }
+
+      #es-vichy.es-vichy .es-banner__text span {
+        font-size: 30px;
+        font-weight: 700;
+        position: relative;
+        top: -8px;
+      }
+
+      #es-vichy.es-vichy .es-banner__disclaimer {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 9px;
+        text-align: center;
+      }
+
+      #es-vichy.es-vichy .es-ingr {
+        margin-bottom: 64px;
+        padding: 0 16px;
+      }
+
+      #es-vichy.es-vichy .es-ingr__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      #es-vichy.es-vichy .es-ingr__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0 12px;
+        margin: 0 -24px;
+      }
+
+      #es-vichy.es-vichy .es-ingr__single {
+        max-width: 246px;
+        padding: 0 12px;
+      }
+
+      #es-vichy.es-vichy .es-ingr__single:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      #es-vichy.es-vichy .es-ingr__image {
+        margin-bottom: 24px;
+      }
+
+      #es-vichy.es-vichy .es-ingr__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-ingr__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      #es-vichy.es-vichy .es-benefits {
+        background: url('assets/bg-3.jpg') no-repeat;
+        background-position: center;
+        min-height: 496px;
+        padding: 0 16px;
+      }
+
+      #es-vichy.es-vichy .es-benefits__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-size: 22px;
+        margin-bottom: 40px;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      #es-vichy.es-vichy .es-benefits__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0 8px;
+        margin: 0 -16px;
+      }
+
+      #es-vichy.es-vichy .es-benefits__disclaimer {
+        font-size: 9px;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      #es-vichy.es-vichy .es-benefits__single {
+        padding: 0 8px;
+        width: 200px;
+      }
+
+      #es-vichy.es-vichy .es-benefits__single:not(:last-child) {
+        margin-bottom: 32px;
+      }
+
+      #es-vichy.es-vichy .es-benefits__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-benefits__icon {
+        margin-bottom: 16px;
+      }
+
+      #es-vichy.es-vichy .es-benefits__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      #es-vichy.es-vichy .es-rev-banner {
+        margin-bottom: 64px;
+      }
+
+      #es-vichy.es-vichy .es-rev-banner__border {
+        background: linear-gradient(45deg, #bb5329 0%, #e07736 100%);
+        margin-bottom: 32px;
+      }
+
+      #es-vichy.es-vichy .es-rev-banner__content {
+        max-width: 365px;
+        padding: 32px 16px;
+      }
+
+      #es-vichy.es-vichy .es-rev-banner__title {
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+        color: #fff;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 24px;
+      }
+
+      #es-vichy.es-vichy .es-rev-banner__list {
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+      }
+
+      #es-vichy.es-vichy .es-rev-banner__item {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        color: #fff;
+        font-size: 12px;
+      }
+
+      #es-vichy.es-vichy .es-rev-banner__item:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      #es-vichy.es-vichy .es-cross {
+        padding: 0 16px;
+      }
+
+      #es-vichy.es-vichy .es-cross__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        text-transform: uppercase;
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 700;
+      }
+
+      #es-vichy.es-vichy .es-cross__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: space-around;
+        padding: 0 8px;
+        margin: 0 -16px;
+      }
+
+      #es-vichy.es-vichy .es-cross__photo--desktop {
+        display: none;
+      }
+
+      #es-vichy.es-vichy .es-cross__packshot {
+        position: relative;
+        z-index: 1;
+      }
+
+      #es-vichy.es-vichy .es-cross__packshot--1::before {
+        position: absolute;
+        content: '1';
+        font-family: 'Roboto';
+        color: #ebebeb;
+        font-size: 230px;
+        top: -50px;
+        left: -70px;
+        line-height: 1;
+        z-index: -1;
+      }
+
+      #es-vichy.es-vichy .es-cross__packshot--2::before {
+        position: absolute;
+        content: '2';
+        font-family: 'Roboto';
+        color: #ebebeb;
+        font-size: 230px;
+        top: -70px;
+        left: -60px;
+        line-height: 1;
+        z-index: -1;
+      }
+
+      #es-vichy.es-vichy .es-cross__packshot--3::before {
+        position: absolute;
+        content: '3';
+        font-family: 'Roboto';
+        color: #ebebeb;
+        font-size: 230px;
+        top: -50px;
+        left: -60px;
+        line-height: 1;
+        z-index: -1;
+      }
+
+      #es-vichy.es-vichy .es-cross__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-vichy.es-vichy .es-cross__single {
+        max-width: 250px;
+        margin-bottom: 32px;
+        padding: 0 8px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+
+      #es-vichy.es-vichy .es-cross__single:hover .es-cross__icon {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+
+      #es-vichy.es-vichy .es-cross__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+      }
+
+      #es-vichy.es-vichy .es-cross__subtitle {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 16px;
+        min-height: 59px;
+      }
+
+      #es-vichy.es-vichy .es-cross__subtitle strong {
+        display: block;
+      }
+
+      #es-vichy.es-vichy .es-cross__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      #es-vichy.es-vichy .es-cross__link {
+        margin: 0;
+        line-height: inherit;
+        font-family: inherit;
+        color: #fff;
+        background: #e17836;
+        font-size: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 6px 24px;
+        margin-bottom: 16px;
+        border: 1px solid #e17836;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+      }
+
+      #es-vichy.es-vichy .es-cross__link:hover {
+        color: #e17836;
+        background: #fff;
+      }
+
+      @media screen and (min-width: 425px) {
+        #es-vichy.es-vichy .es-kv__animated-item {
+          height: 400px;
+        }
+        #es-vichy.es-vichy .es-use {
+          min-height: 840px;
+        }
+      }
+
+      @media screen and (min-width: 560px) {
+        #es-vichy.es-vichy .es-kv {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
+        #es-vichy.es-vichy .es-kv__images {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+          flex-flow: column;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+        }
+        #es-vichy.es-vichy .es-kv__photo {
+          -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+          order: -1;
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+        }
+        #es-vichy.es-vichy .es-use {
+          min-height: 840px;
+        }
+        #es-vichy.es-vichy .es-cross__container {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row;
+          flex-flow: row;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+          align-items: stretch;
+          gap: 30px;
+        }
+        #es-vichy.es-vichy .es-cross__photo--desktop {
+          display: block;
+        }
+        #es-vichy.es-vichy .es-cross__packshot {
+          display: none;
+        }
+        #es-vichy.es-vichy .es-cross__single {
+          max-width: 160px;
+        }
+      }
+
+      @media screen and (min-width: 720px) {
+        #es-vichy.es-vichy .es-ingr__single {
+          width: 24%;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        #es-vichy.es-vichy .es-kv {
+          margin-bottom: 32px;
+        }
+        #es-vichy.es-vichy .es-info__border {
+          margin-bottom: 100px;
+        }
+        #es-vichy.es-vichy .es-info__single {
+          width: 25%;
+        }
+        #es-vichy.es-vichy .es-use {
+          background-position: center;
+          margin-top: -146px;
+          min-height: 680px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 0px;
+        }
+        #es-vichy.es-vichy .es-use__content {
+          padding-top: 0;
+          max-width: 300px;
+          margin-right: 135px;
+          margin-left: auto;
+          margin-top: 115px;
+        }
+        #es-vichy.es-vichy .es-banner {
+          background: url('assets/bg-2.jpg') no-repeat center;
+          min-height: 326px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 100px;
+        }
+        #es-vichy.es-vichy .es-banner__content {
+          max-width: 590px;
+          margin-bottom: 16px;
+        }
+        #es-vichy.es-vichy .es-banner__border {
+          position: relative;
+          z-index: 30;
+          margin-left: 63px;
+          max-width: 344px;
+        }
+        #es-vichy.es-vichy .es-banner__single:not(:last-child) {
+          margin-bottom: 0;
+        }
+        #es-vichy.es-vichy .es-ingr {
+          margin-bottom: 0;
+        }
+        #es-vichy.es-vichy .es-ingr__title {
+          margin-bottom: 64px;
+        }
+        #es-vichy.es-vichy .es-ingr__container {
+          max-width: 730px;
+          margin: 0 auto;
+          padding: 0;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+        #es-vichy.es-vichy .es-ingr__single {
+          padding: 0;
+          max-width: 230px;
+        }
+        #es-vichy.es-vichy .es-ingr__single:not(:last-child) {
+          margin-bottom: 0;
+        }
+        #es-vichy.es-vichy .es-rev-banner {
+          background: url('assets/bg-4.jpg') no-repeat center;
+          min-height: 350px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          margin-bottom: 100px;
+          margin-top: 70px;
+        }
+        #es-vichy.es-vichy .es-rev-banner__border {
+          margin-right: 100px;
+          margin-bottom: 0;
+        }
+        #es-vichy.es-vichy .es-rev-banner__content {
+          padding: 32px 54px;
+        }
+        #es-vichy.es-vichy .es-rev-banner__single:first-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: 820px) {
+        #es-vichy.es-vichy .es-info__features {
+          width: calc(100% + 100px);
+          margin-left: -50px;
+        }
+
+        #es-vichy.es-vichy .es-banner__border {
+          position: relative;
+          z-index: 30;
+          margin-left: 50px;
+          max-width: 508px;
+        }
+
+        #es-vichy.es-vichy .es-cross__container {
+          gap: 55px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        #es-vichy.es-vichy .es-benefits {
+          margin-top: 50px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: flex-start;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        #es-vichy.es-vichy .es-benefits__container {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+        }
+        #es-vichy.es-vichy .es-benefits__disclaimer {
+          margin-top: 60px;
+          -webkit-transform: translateY(140px);
+          transform: translateY(140px);
+        }
+        #es-vichy.es-vichy .es-benefits__content {
+          max-width: 523px;
+        }
+        #es-vichy.es-vichy .es-benefits__single {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 50%;
+          flex: 1 50%;
+          max-width: none;
+          max-width: 168px;
+        }
+      }
+
+      @-webkit-keyframes slidedown {
+        from {
+          opacity: 0;
+          -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slidedown {
+        from {
+          opacity: 0;
+          -webkit-transform: translateY(-32px);
+          transform: translateY(-32px);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      @-webkit-keyframes slideright {
+        from {
+          opacity: 0.3;
+          -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideright {
+        from {
+          opacity: 0.3;
+          -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+      }
+
+      #es-vichy.es-vichy .es-cross__single {
+        max-width: 160px;
+      }
+
+      @media screen and (min-width: 768px) {
+        #es-vichy.es-vichy .es-banner__content {
+          padding-top: 48px;
+        }
+        #es-vichy.es-vichy .es-ingr__single:not(:last-child) {
+          margin-bottom: 32px;
+        }
+        #es-vichy.es-vichy .es-ingr__container {
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+      }
+
+      #es-vichy.es-vichy .es-cross__packshot--1 {
+        max-width: 128px;
+      }
+
+      #es-vichy.es-vichy .es-cross__packshot--2 {
+        max-width: 175px;
+      }
+
+      #es-vichy.es-vichy .es-cross__packshot--3 {
+        max-width: 120px;
+      }
+
+      .es-ingr__image {
+        position: relative;
+      }
+
+      .es-ingr__label {
+        margin: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.66);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 12px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="es-vichy" id="es-vichy">
+      <section class="es-kv">
+        <div class="es-kv__images">
+          <div class="es-kv__packshot">
+            <img src="assets/packshot.png" alt="" class="es-kv__img" />
+            <div class="es-kv__animated-items">
+              <img
+                src="assets/bottle.png"
+                alt=""
+                class="es-kv__animated-item"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="es-kv__photo">
+          <div class="es-kv__content">
+            <h2 class="es-kv__title">
+              KASDIENĖ APSAUGA <br />
+              NUO UV SPINDULIŲ <br />
+              LĖTINA FOTOSENĖJIMĄ
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-info">
+        <div class="es-info__border">
+          <h3 class="es-info__title">
+            NET 80 % ODOS SENĖJIMO POŽYMIŲ ATSIRADIMO PRIEŽASTIS YRA UV
+            SPINDULIUOTĖ.
+          </h3>
+          <p class="es-info__desc">
+            Atraskite <strong> CAPITAL SOLEIL UV AGE DAILY </strong>fluidą nuo
+            odos fotosenėjimo su itin stipria apsauga nuo saulės ir senėjimą
+            lėtinančiomis veikliosiomis medžiagomis.
+          </p>
+        </div>
+        <div class="es-info__features">
+          <div class="es-info__single">
+            <div class="es-info__icon">
+              <img src="assets/check.png" class="es-info__img" alt="" />
+            </div>
+            <p class="es-info__text">
+              Itin stipri apsauga nuo UVB SPF50+ ir UVA <br />PF46.
+            </p>
+          </div>
+          <div class="es-info__single">
+            <div class="es-info__icon">
+              <img src="assets/check.png" class="es-info__img" alt="" />
+            </div>
+            <p class="es-info__text">
+              Užkerta kelią raukšlių <br />ir dėmių atsiradimui.
+            </p>
+          </div>
+          <div class="es-info__single">
+            <div class="es-info__icon">
+              <img src="assets/check.png" class="es-info__img" alt="" />
+            </div>
+            <p class="es-info__text">Lengva, nebalinanti tekstūra.</p>
+          </div>
+          <div class="es-info__single">
+            <div class="es-info__icon">
+              <img src="assets/check.png" class="es-info__img" alt="" />
+            </div>
+            <p class="es-info__text">
+              Naudokite kiekvieną dieną, visus metus, net debesuotomis dienomis.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-use">
+        <div class="es-use__content">
+          <h3 class="es-use__title">NAUDOKITE, JEI</h3>
+          <ul class="es-use__list">
+            <li class="es-use__item">
+              Ant jūsų odos linkusios atsirasti dėmės.
+            </li>
+            <li class="es-use__item">
+              Norite užkirsti kelią odos senėjimo požymių atsiradimui.
+            </li>
+            <li class="es-use__item">
+              Jums buvo atliktos kosmetinės procedūros arba naudojote kosmetikos
+              priemones, kurioms reikalinga apsauga nuo UV spindulių.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="es-banner">
+        <div class="es-banner__content">
+          <div class="es-banner__border">
+            <h3 class="es-banner__title">
+              KLINIŠKAI ĮRODYTAS VEIKSMINGUMAS APSAUGANT <br />
+              NUO FOTOSENĖJIMO POŽYMIŲ ATSIRADIMO
+            </h3>
+            <div class="es-banner__container">
+              <div class="es-banner__single">
+                <p class="es-banner__text es-banner__text--number">
+                  -27<span>%</span>
+                </p>
+                <p class="es-banner__text">MAŽIAU DĖMIŲ*</p>
+              </div>
+            </div>
+          </div>
+          <p class="es-banner__disclaimer">
+            *43 moterų grupės klinikinis <br />tyrimas po 56 dienų.
+          </p>
+        </div>
+      </section>
+
+      <section class="es-ingr">
+        <h3 class="es-ingr__title">
+          VEIKSMINGA FORMULĖ SU VEIKLIOSIOMIS MEDŽIAGOMIS
+        </h3>
+        <div class="es-ingr__container">
+          <div class="es-ingr__single">
+            <div class="es-ingr__image">
+              <p class="es-ingr__label">NETLOCK TECHNOLOGIJA</p>
+              <img src="assets/ingr-1.png" alt="" class="es-ingr__img" />
+            </div>
+            <p class="es-ingr__text">
+              Patikima ir patentuota UV filtrų technologija. Itin stipri
+              apsauga, platus apsaugos nuo UVA + UVB veikimo spektras.
+            </p>
+          </div>
+          <div class="es-ingr__single">
+            <div class="es-ingr__image">
+              <p class="es-ingr__label">4% PEPTIDŲ</p>
+              <img src="assets/ingr-2.png" alt="" class="es-ingr__img" />
+            </div>
+            <p class="es-ingr__text">Pasižymi stangrinamuoju poveikiu.</p>
+          </div>
+          <div class="es-ingr__single">
+            <div class="es-ingr__image">
+              <p class="es-ingr__label">2% NIACINAMIDO</p>
+              <img src="assets/ingr-3.png" alt="" class="es-ingr__img" />
+            </div>
+            <p class="es-ingr__text">
+              Veikia raminamai, užkerta kelią dėmių atsiradimui, riboja laisvųjų
+              radikalų susidarymą.
+            </p>
+          </div>
+          <div class="es-ingr__single">
+            <div class="es-ingr__image">
+              <p class="es-ingr__label">
+                VICHY <br />
+                PROBIOTINĖ <br />
+                FRAKCIJA <br />
+                IR VULKANINIS<br />
+                VANDUO
+              </p>
+              <img src="assets/ingr-4.png" alt="" class="es-ingr__img" />
+            </div>
+            <p class="es-ingr__text">
+              Stiprina natūralų odos apsauginį barjerą, saugantį ją nuo
+              kenksmingo išorinių veiksnių poveikio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-benefits">
+        <div class="es-benefits__content">
+          <h3 class="es-benefits__title">GERO TOLERAVIMO GARANTIJA</h3>
+          <div class="es-benefits__container">
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img src="assets/icon-1.png" alt="" class="es-benefits__img" />
+              </div>
+              <p class="es-benefits__text">Hipoalerginis</p>
+            </div>
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img src="assets/icon-2.png" alt="" class="es-benefits__img" />
+              </div>
+              <p class="es-benefits__text">
+                Išbandytas prižiūrint dermatologams
+              </p>
+            </div>
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img src="assets/icon-3.png" alt="" class="es-benefits__img" />
+              </div>
+              <p class="es-benefits__text">Nekomedogeninis</p>
+            </div>
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img src="assets/icon-4.png" alt="" class="es-benefits__img" />
+              </div>
+              <p class="es-benefits__text">
+                Be kvapiųjų<br />
+                medžiagų
+              </p>
+            </div>
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img src="assets/icon-4.png" alt="" class="es-benefits__img" />
+              </div>
+              <p class="es-benefits__text">Negraužia akių</p>
+            </div>
+          </div>
+          <div class="es-benefits__disclaimer">
+            <p>*Formulė sukurta, siekiant sumažinti akių graužimą.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-rev-banner">
+        <div class="es-rev-banner__border">
+          <div class="es-rev-banner__content">
+            <h3 class="es-rev-banner__title">NAUDOJIMO BŪDAS</h3>
+            <ol class="es-rev-banner__list">
+              <li class="es-rev-banner__item">
+                Naudokite kaip paskutinę kasdienės priežiūros priemonę, iš karto
+                po to, kai užtepėte mėgstamą kremą arba vietoj dieninio kremo.
+              </li>
+              <li class="es-rev-banner__item">
+                Atminkite, kad norint užtikrinti maksimalią apsaugą nuo UV
+                spinduliuotės, būtina pakartotinai
+              </li>
+              <li class="es-rev-banner__item">
+                Naudokite kiekvieną dieną, visus metus, net debesuotomis
+                dienomis.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-cross">
+        <h3 class="es-cross__title">PRIEŽIŪROS RUTINA</h3>
+        <div class="es-cross__photo es-cross__photo--desktop">
+          <img src="assets/packshots.png" alt="" class="es-cross__img" />
+        </div>
+        <div class="es-cross__container">
+          <div class="es-cross__single">
+            <div class="es-cross__packshot es-cross__packshot--1">
+              <img src="assets/cross-1.png" alt="" class="es-cross__img" />
+            </div>
+            <h4 class="es-cross__subtitle">
+              <strong>MINÉRAL 89</strong> BOOSTER<br />
+            </h4>
+            <div class="es-cross__wrapper">
+              <p class="es-cross__text">
+                Stiprinamoji priemonė drėkinanti ir stiprinanti natūralų odos
+                apsauginį barjerą.
+              </p>
+              <a href="#" target="_blank" class="es-cross__link">tutvu</a>
+            </div>
+          </div>
+          <div class="es-cross__single">
+            <div class="es-cross__packshot es-cross__packshot--2">
+              <img src="assets/cross-2.png" alt="" class="es-cross__img" />
+            </div>
+            <h4 class="es-cross__subtitle">
+              <strong>LIFTACTIV</strong>COLLAGEN SPECIALIST
+            </h4>
+            <div class="es-cross__wrapper">
+              <p class="es-cross__text">
+                Dieninis kremas, drėkinantis sausą odą 48 valandas.
+              </p>
+              <a href="#" target="_blank" class="es-cross__link">tutvu</a>
+            </div>
+          </div>
+          <div class="es-cross__single">
+            <div class="es-cross__packshot es-cross__packshot--3">
+              <img src="assets/cross-3.png" alt="" class="es-cross__img" />
+            </div>
+            <h4 class="es-cross__subtitle">
+              <strong>CAPITAL SOLEIL</strong> UV-AGE&nbsp;DAILY SPF&nbsp;50+
+            </h4>
+            <div class="es-cross__wrapper">
+              <p class="es-cross__text">
+                Fluidas nuo odos fotosenėjimo, užtikrinantis išplėstinę apsaugą
+                nuo UVA ir UVB spinduliuotės.
+              </p>
+              <a href="#" target="_blank" class="es-cross__link">tutvu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
